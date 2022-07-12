@@ -38,4 +38,13 @@ public class Tenant implements Person{
     public int hashCode() {
         return Objects.hash(name, secondName, age);
     }
+
+    @Override
+    public String toString() {
+        return "Tenant{" +
+                "name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

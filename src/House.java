@@ -26,6 +26,7 @@ public class House {
         this.staff = new ArrayList<ServiceStaff>();
         this.staff.add(new ServiceStaff("plumber","VItaliy","Orlov",21,20000));
         this.staff.add(new ServiceStaff("cleaner","Ignat","Svetlov",21,15000));
+        this.staff.add(new ServiceStaff("cleaner","Ihor","Sverlov",21,15000));
         this.staff.add(new ServiceStaff("electrecian","Boris","Ulianov",21,25000));
         this.transactions = new HashSet<>();
     }
@@ -91,5 +92,23 @@ public class House {
     @Override
     public int hashCode() {
         return Objects.hash(apartments, staff, transactions);
+    }
+
+    public void setSalaryForStaffbyTitle(int salary, String title){
+        for (ServiceStaff s:
+            this.staff ) {
+            if (s.getTitle().equals(title)){
+                s.setSalary(salary);
+            }
+        }
+    }
+
+    public void setSalaryForEmployee(int salary, String name, String secondName){
+        for (ServiceStaff s:
+                this.staff ) {
+            if (s.getName().equals(name) && s.getSecondName().equals(secondName)){
+                s.setSalary(salary);
+            }
+        }
     }
 }

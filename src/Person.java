@@ -8,4 +8,5 @@ public interface Person {
     public int getAge();
     public boolean equals(Object o);
     public int hashCode();
+    public String toString();
 }

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a257667-e90d-41b7-acc1-8e49d325bf09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServiceStaff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tenant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transactions.java" afterDir="false" />
+    <list default="true" id="0a257667-e90d-41b7-acc1-8e49d325bf09" name="Changes" comment="class structure, some method was added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/House.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceStaff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +77,16 @@
       <option name="presentableId" value="Default" />
       <updated>1657572264799</updated>
       <workItem from="1657572267119" duration="3123000" />
-      <workItem from="1657643899267" duration="11253000" />
+      <workItem from="1657643899267" duration="12296000" />
     </task>
+    <task id="LOCAL-00001" summary="class structure, some method was added">
+      <created>1657659259560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657659259560</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,20 +103,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/House.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/House.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="class structure, some method was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="class structure, some method was added" />
   </component>
 </project>

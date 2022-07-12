@@ -43,6 +43,10 @@ public class ServiceStaff implements Person{
         return this.age;
     }
 
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -54,5 +58,15 @@ public class ServiceStaff implements Person{
     @Override
     public int hashCode() {
         return Objects.hash(title, name, secondName, age, salary);
+    }
+    @Override
+    public String toString() {
+        return "ServiceStaff{" +
+                "title='" + title + '\'' +
+                ", name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
     }
 }
