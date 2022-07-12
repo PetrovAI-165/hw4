@@ -4,19 +4,22 @@ import static java.lang.Math.abs;
 
 public class House {
     //key : apartments number, value: apartments owner
-    Map<Integer,Tenant> apartments;
-    List<ServiceStaff> staff;
-    Set<Transactions> transactions;
+    HashMap<Integer,Tenant> apartments;
+    ArrayList<ServiceStaff> staff;
+    HashSet<Transactions> transactions;
+    int houseNumber;
 
-    public House(Map<Integer, Tenant> apartments, List<ServiceStaff> staff, Set<Transactions> transactions) {
+    public House(HashMap<Integer, Tenant> apartments, ArrayList<ServiceStaff> staff, HashSet<Transactions> transactions,int houseNumber) {
         this.apartments = apartments;
         this.staff = staff;
         this.transactions = transactions;
+        this.houseNumber = houseNumber;
     }
 
     //just for comfortable datasetup
     public House() throws Exception {
         //Data setup
+        this.houseNumber =1;
         this.apartments = new HashMap<Integer,Tenant>();
         this.apartments.put(1,new Tenant("Vasilii","Ivanov",32));
         this.apartments.put(2,new Tenant("Sergey","Petrov",25));
@@ -86,12 +89,22 @@ public class House {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         House house = (House) o;
-        return apartments.equals(house.apartments) && staff.equals(house.staff) && transactions.equals(house.transactions);
+        return houseNumber == house.houseNumber && apartments.equals(house.apartments) && staff.equals(house.staff) && transactions.equals(house.transactions);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(apartments, staff, transactions);
+        return Objects.hash(apartments, staff, transactions, houseNumber);
+    }
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "apartments=" + apartments +
+                ", staff=" + staff +
+                ", transactions=" + transactions +
+                ", houseNumber=" + houseNumber +
+                '}';
     }
 
     public void setSalaryForStaffbyTitle(int salary, String title){
@@ -110,5 +123,14 @@ public class House {
                 s.setSalary(salary);
             }
         }
+    }
+    public void changeApOwner(int apId,Tenant newOwner){
+        this.apartments.put(apId,newOwner);
+    }
+
+    public void moveAllTenantToNextApp(){
+        HashMap<Integer,Tenant> buffer = new HashMap<Integer,Tenant>();
+        this.apartments.forEach((k,v)-> buffer.put(k+1,v));
+        this.apartments = buffer;
     }
 }

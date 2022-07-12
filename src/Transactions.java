@@ -49,4 +49,14 @@ public class Transactions {
     public int hashCode() {
         return Objects.hash(direction, cost, apartment, id);
     }
+
+    @Override
+    public String toString() {
+        return "Transactions{" +
+                "direction='" + direction + '\'' +
+                ", cost=" + cost +
+                ", apartment=" + apartment +
+                ", id=" + id +
+                '}';
+    }
 }
